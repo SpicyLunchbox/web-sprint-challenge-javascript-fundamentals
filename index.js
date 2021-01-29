@@ -59,8 +59,9 @@ const zooAnimals = [
   */
 
   function animalNames(data){
-    let displayNames = data.map(function(item){
-      return `name: ${item.animal_name}, scientific: ${item.scientific_name}`;
+    let displayNames = [];
+    data.forEach(function(item){
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     });
     return displayNames;
   }
